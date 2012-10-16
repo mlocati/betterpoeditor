@@ -1,0 +1,22 @@
+# solution user options files
+*.suo
+
+# BetterPoEditor generated binaries and objects
+/src/BetterPoEditor/bin/
+/src/BetterPoEditor/obj/
+
+# Jayrock.Json generated binaries and objects
+/src/Jayrock.Json/bin/
+/src/Jayrock.Json/obj/
+
+# NetSpell.DictionaryBuild generated binaries and objects
+/src/NetSpell.DictionaryBuild/bin/
+/src/NetSpell.DictionaryBuild/obj/
+
+# NetSpell.SpellChecker generated binaries and objects
+/src/NetSpell.SpellChecker/bin/
+/src/NetSpell.SpellChecker/obj/
+
+# TidyNet generated binaries and objects
+/src/TidyNet/bin/
+/src/TidyNet/obj/
