@@ -1,0 +1,41 @@
+#!/bin/sh
+echo -n "Creating ${1}... "
+MYPATH=`readlink -f $0`
+if [ $? = 0 ]; then
+	MYFOLDER=`dirname ${MYPATH}` 2>/dev/null
+	if [ $? = 0 ]; then
+		LOGFILE=${MYFOLDER}/build.log
+		BASEFOLDER=`readlink -f ${MYFOLDER}/..` 2>/dev/null
+		if [ $? = 0 ]; then
+			cd ${BASEFOLDER}/src/${1} 2>/dev/null
+			if [ $? = 0 ]; then
+				xbuild /nologo /property:Configuration=Release *.csproj >${LOGFILE} 2>&1
+				if [ $? = 0 ]; then
+					rm ${LOGFILE}
+					echo "ok."
+					RC=0
+				else
+					echo "xbuild failed.\n\nAre mono and xbuild installed? If not please do:\nsudo apt-get install mono-xbuild mono-gmcs\n\nFor more informations see the file\n${LOGFILE}"
+					RC=5
+				fi
+				cd ${MYFOLDER}
+			else
+				echo "cd failed."
+				RC=4
+			fi
+		else
+			echo "readlink#2 failed."
+			RC=3
+		fi
+	else
+		echo "dirname failed."
+		RC=2
+	fi
+else
+	echo "readlink#1 failed."
+	RC=1
+fi
+exit ${RC}
+xbuild /nologo /property:Configuration=Release *.csproj
+
+echo ${AA}

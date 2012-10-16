@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+    <resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+    <resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+    <resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+    <resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+    <data name="warning">
+		<value>Warning</value>
+	</data>
+    <data name="error">
+		<value>Error</value>
+	</data>
+    <data name="info">
+		<value>Info</value>
+	</data>
+    <data name="message_format">
+		<value>line {0} column {1} - {2}: {3} </value>
+	</data>
+    <data name="illegal_char">
+		<value>Replacing illegal character code {0}</value>
+	</data>
+    <data name="missing_semicolon">
+		<value>Entity "{0}" doesn't end in ';'</value>
+	</data>
+	<data name="unknown_entity">
+		<value>Unescaped &amp; or unknown entity "{0}"</value>
+	</data>
+	<data name="unescaped_ampersand">
+		<value>Unescaped &amp; which should be written as &amp;amp;</value>
+	</data>
+	<data name="unknown_attribute">
+		<value>Unknown attribute "{0}"</value>
+	</data>
+	<data name="missing_attribute">
+		<value>{0} lacks "{1}" attribute</value>
+	</data>
+	<data name="missing_attr_value">
+		<value>{0} attribute "{1}" lacks value</value>
+	</data>
+	<data name="missing_imagemap">
+		<value>{0} should use client-side image map</value>
+	</data>
+	<data name="bad_attribute_value">
+		<value>{0} unknown attribute value "{1}"</value>
+	</data>
+	<data name="xml_attribute_value">
+		<value>{0} has XML attribute "{1}"</value>
+	</data>
+	<data name="unexpected_gt">
+		<value>{0} missing '&gt;' for end of tag</value>
+	</data>
+	<data name="unexpected_quotemark">
+		<value>{0} unexpected or duplicate quote mark</value>
+	</data>
+	<data name="repeated_attribute">
+		<value>{0} repeated attribute</value>
+	</data>
+	<data name="nested_emphasis">
+		<value>{0} nested emphasis</value>
+	</data>
+	<data name="coerce_to_endtag">
+		<value>&lt;{0}&gt; is probably intended as &lt;/{0}&gt;</value>
+	</data>
+	<data name="proprietary_attr_value">
+		<value>{0} proprietary attribute value "{1}"</value>
+	</data>
+	<data name="missing_endtag_for">
+		<value>Missing &lt;/{0}&gt;</value>
+	</data>
+	<data name="missing_endtag_before">
+		<value>Missing &lt;/{0}&gt; before {1}</value>
+	</data>
+	<data name="discarding_unexpected">
+		<value>Discarding unexpected {0}</value>
+	</data>
+	<data name="forced_end_anchor">
+		<value>&lt;a&gt; is probably intended as &lt;/a&gt;</value>
+	</data>
+	<data name="non_matching_endtag_1">
+		<value>Replacing unexpected {0} with &lt;/{1}&gt;</value>
+	</data>
+	<data name="tag_not_allowed_in">
+		<value>{0} isn't allowed in &lt;{1}&gt; elements</value>
+	</data>
+	<data name="doctype_after_tags">
+		<value>&lt;!DOCTYPE&gt; isn't allowed after elements</value>
+	</data>
+	<data name="missing_starttag">
+		<value>Missing &lt;{0}&gt;</value>
+	</data>
+	<data name="unexpected_endtag">
+		<value>Unexpected &lt;/{0}&gt;</value>
+	</data>
+	<data name="unexpected_endtag_suffix">
+		<value>Unexpected &lt;/{0}&gt; in &lt;{1}&gt;</value>
+	</data>
+	<data name="too_many_elements">
+		<value>Too many {0} elements</value>
+	</data>
+	<data name="too_many_elements_suffix">
+		<value>Too many {0} elements in &lt;{1}&gt;</value>
+	</data>
+	<data name="using_br_inplace_of">
+		<value>Using &lt;br&gt; in place of </value>
+	</data>
+	<data name="inserting_tag">
+		<value>Inserting implicit &lt;{0}&gt;</value>
+	</data>
+	<data name="cant_be_nested">
+		<value>{0} can't be nested</value>
+	</data>
+	<data name="proprietary_element">
+		<value>{0} is not approved by W3C</value>
+	</data>
+	<data name="obsolete_element">
+		<value>Replacing obsolete element {0} with {1}</value>
+	</data>
+	<data name="replacing_element">
+		<value>Replacing element {0} with {1}</value>
+	</data>
+	<data name="trim_empty_element">
+		<value>Trimming empty {0}</value>
+	</data>
+	<data name="missing_title_element">
+		<value>Inserting missing 'title' element</value>
+	</data>
+	<data name="illegal_nesting">
+		<value>{0} shouldn't be nested</value>
+	</data>
+	<data name="noframes_content">
+		<value>{0} not inside 'noframes' element</value>
+	</data>
+	<data name="inconsistent_version">
+		<value>HTML doctype doesn't match content</value>
+	</data>
+	<data name="content_after_body">
+		<value>Content occurs after end of body</value>
+	</data>
+	<data name="malformed_comment">
+		<value>Adjacent hyphens within comment</value>
+	</data>
+	<data name="bad_comment_chars">
+		<value>Expecting -- or &gt;</value>
+	</data>
+	<data name="bad_xml_comment">
+		<value>XML comments can't contain --</value>
+	</data>
+	<data name="bad_cdata_content">
+		<value>'&lt;' + '/' + letter not allowed here</value>
+	</data>
+	<data name="inconsistent_namespace">
+		<value>HTML namespace doesn't match content</value>
+	</data>
+	<data name="suspected_missing_quote">
+		<value>Missing quotemark for attribute value</value>
+	</data>
+	<data name="duplicate_frameset">
+		<value>Repeated FRAMESET element</value>
+	</data>
+	<data name="unknown_element">
+		<value>{0} is not recognized!</value>
+	</data>
+	<data name="dtype_not_upper_case">
+		<value>SYSTEM, PUBLIC, W3C, DTD, EN must be upper case</value>
+	</data>
+	<data name="unexpected_end_of_file">
+		<value>End of file while parsing attributes</value>
+	</data>
+	<data name="malformed_doctype">
+		<value>Expected "html PUBLIC" or "html SYSTEM"</value>
+	</data>
+	<data name="id_name_mismatch">
+		<value>{0} id and name attribute value mismatch</value>
+	</data>
+	<data name="badchars_summary">
+		<value>Characters codes for the Microsoft Windows fonts in the range 128 - 159 may not be recognized on other platforms. You are instead recommended to use named entities, e.g. &amp;trade; rather than Windows character code 153 (0x2122 in Unicode). Note that as of February 1998 few browsers support the new entities.</value>
+	</data>
+	<data name="badform_summary">
+		<value>You may need to move one or both of the &lt;form&gt; and &lt;/form&gt; tags. HTML elements should be properly nested and form elements are no exception. For instance you should not place the &lt;form&gt; in one table cell and the &lt;/form&gt; in another. If the &lt;form&gt; is placed before a table, the &lt;/form&gt; cannot be placed inside the table! Note that one form can't be nested inside another!</value>
+	</data>
+	<data name="badaccess_missing_summary">
+		<value>The table summary attribute should be used to describe the table structure. It is very helpful for people using non-visual browsers. The scope and headers attributes for table cells are useful for specifying which headers apply to each table cell, enabling non-visual browsers to provide a meaningful context for each cell.</value>
+	</data>
+	<data name="badaccess_missing_image_alt">
+		<value>The alt attribute should be used to give a short description of an image; longer descriptions should be given with the longdesc attribute which takes a URL linked to the description.  These measures are needed for people using non-graphical browsers.</value>
+	</data>
+	<data name="badaccess_missing_image_map">
+		<value>Use client-side image maps in preference to server-side image maps as the latter are inaccessible to people using non-graphical browsers. In addition, client-side maps are easier to set up and provide immediate feedback to users.</value>
+	</data>
+	<data name="badaccess_missing_link_alt">
+		<value>For hypertext links defined using a client-side image map, you need to use the alt attribute to provide a textual description of the link for people using non-graphical browsers.</value>
+	</data>
+	<data name="badaccess_frames">
+		<value>Pages designed using frames presents problems for people who are either blind or using a browser that doesn't support frames. A frames-based page should always include an alternative layout inside a NOFRAMES element.</value>
+	</data>
+	<data name="badaccess_summary">
+		<value>For further advice on how to make your pages accessible see "{0}". You may also want to try "http://www.cast.org/bobby/" which is a free Web-based service for checking URLs for accessibility.</value>
+	</data>
+	<data name="badlayout_using_layer">
+		<value>The Cascading Style Sheets (CSS) Positioning mechanism is recommended in preference to the proprietary &lt;LAYER&gt; element due to limited vendor support for LAYER.</value>
+	</data>
+	<data name="badlayout_using_spacer">
+		<value>You are recommended to use CSS for controlling white space (e.g. for indentation, margins and line spacing). The proprietary &lt;SPACER&gt; element has limited vendor support.</value>
+	</data>
+	<data name="badlayout_using_font">
+		<value>You are recommended to use CSS to specify the font and properties such as its size and color. This will reduce the size of HTML files and make them easier maintain compared with using &lt;FONT&gt; elements.</value>
+	</data>
+	<data name="badlayout_using_nobr">
+		<value>You are recommended to use CSS to control line wrapping.  Use \"white-space: nowrap\" to inhibit wrapping in place of inserting &lt;NOBR&gt;...&lt;/NOBR&gt; into the markup.</value>
+	</data>
+	<data name="badlayout_using_body">
+		<value>You are recommended to use CSS to specify page and link colors</value>
+	</data>
+	<data name="bad_argument">
+		<value>Warning - missing or malformed argument for option: {0}</value>
+	</data>
+	<data name="needs_author_intervention">
+		<value>This document has errors that must be fixed before using HTML Tidy to generate a tidied up version.</value>
+	</data>
+	<data name="missing_body">
+		<value>Can't create slides - document is missing a body element.</value>
+	</data>
+	<data name="slides_found">
+		<value>{0} Slides found</value>
+	</data>
+	<data name="report_version">
+		<value>Document content looks like {0}</value>
+	</data>
+	<data name="doctype_given">
+		<value>Doctype given is "{0}"</value>
+	</data>
+	<data name="num_warnings">
+		<value>{0} warnings were found!</value>
+	</data>
+	<data name="num_errors">
+		<value>{0} errors were found!</value>
+	</data>
+	<data name="num_warnings_errors">
+		<value>{0} warnings, {1} errors were found!</value>
+	</data>
+	<data name="no_warnings">
+		<value>No warnings or errors were found</value>
+	</data>
+	<data name="bad_tree">
+		<value>Panic - tree has lost its integrity</value>
+	</data>
+</root>

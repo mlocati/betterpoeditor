@@ -1,0 +1,183 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A426EE0B-E52E-4D74-AF24-06797142D7B2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NetSpell.SpellChecker</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NetSpell.SpellChecker</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Affix\AffixEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Affix\AffixEntryCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Affix\AffixEntryEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Affix\AffixRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Affix\AffixRuleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Affix\AffixRuleEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Affix\AffixUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Phonetic\PhoneticRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Phonetic\PhoneticRuleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Phonetic\PhoneticRuleEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Phonetic\PhoneticUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\Word.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dictionary\WordDictionary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuggestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplaceWordEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spelling.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpellingEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TraceWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Dictionary\Dictionary.bmp" />
+    <EmbeddedResource Include="Dictionary\WordDictionary.resx">
+      <DependentUpon>WordDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuggestionForm.resx">
+      <DependentUpon>SuggestionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spelling.bmp" />
+    <EmbeddedResource Include="Spelling.resx">
+      <DependentUpon>Spelling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

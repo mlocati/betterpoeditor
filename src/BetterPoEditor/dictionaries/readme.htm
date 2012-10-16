@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>BetterPoEditor - Hot to create a dictionary file</title>
+<style type="text/css">
+body
+{
+	font-family:verdana,arial,sans-serif;
+	font-size:8pt;
+}
+li
+{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+<p>BetterPoEditor uses the <a href="http://www.loresoft.com/Applications/NetSpell" target="_blank">NetSpell</A> component for the spell check operations.</p>
+<P>If the dictionary for your language is not included in the standard distribution of BetterPoEditor you can create it in a very simple manner, following there steps:</p>
+<ol>
+	<li>Browse to the the <a href="http://extensions.services.openoffice.org/en/dictionaries?cid=926386">OpenOffice Extensions repository</a></li>
+	<li>Locate and download the dictionary pack for the language you need</li>
+	<li>The downloaded file has an .oxt extension, but it is a zip archive. Extract the <b>.dic</b> and the <b>.aff</b> files that it contains with your favorite archive manager (<a href="http://www.7-zip.org" target="_blank">7-zip</a> can do that for example).</li>
+	<li>Launch the DictionaryBuild application that comes with BetterPoEditor (DictionaryBuild is part of the NetSpell project).</li>
+	<li>Create a new empty dictionary (<code>File &rarr; New</code>)</li>
+	<li>Import the <b>.aff</b> file with <code>Dictionary &rarr; Add OpenOffice Affix Data</code>.</li>
+	<li>Import the <b>.dic</b> file with <code>Dictionary &rarr; Add OpenOffice Word List</code>.</li>
+	<li>Save (File &rarr; Save) the dictionary in the <code>dictionaries</code> folder present in the installation folder of BetterPoEditor (that is <a href="." target="_blank">this folder</a>).</li>
+	<li>The file name must be the one signaled by BetterPoEditor.</li>
+</ol>
+</body>
+</html>

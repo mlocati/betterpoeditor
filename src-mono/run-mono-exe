@@ -1,0 +1,25 @@
+#!/bin/sh
+EXENAME=`dirname \`readlink -f $0\``/$1
+
+if [ "${1}" = "" ]; then
+	echo "Missing program to launch" >&2
+	exit 1
+else
+	if [ ! -f "${EXENAME}" ]; then
+		echo "Unable to find the program to launch\n${EXENAME}" >&2
+		exit 2
+	else
+		if [ ! -f "/usr/bin/mono" ]; then
+			echo "mono is not installed.\nYou can install it with the following command:\nsudo apt-get install mono-runtime" >&2
+			exit 3
+		else
+			if [ ! -e "/usr/lib/mono/2.0/System.Windows.Forms.dll" ]; then
+				echo "libmono-winforms2.0 is not installed.\nYou can install it with the following command:\nsudo apt-get install libmono-winforms2.0-cil" >&2
+				exit 4
+			else
+				exec /usr/bin/mono --runtime=v2.0.50727 "${EXENAME}" "$2"
+				exit 0
+			fi
+		fi
+	fi
+fi

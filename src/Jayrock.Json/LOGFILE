@@ -1,0 +1,24 @@
+XBuild Engine Version 0.1
+Mono, Version 2.0.1.0
+Copyright (C) Marek Sieradzki 2005. All rights reserved.
+
+Build started 07/01/2010 13:33:12.
+__________________________________________________
+Project "/mnt/bepoe/src/Jayrock-Json/Jayrock-Json.csproj" (Build target(s)):
+
+Target PrepareForBuild:
+		Configuration: Release Platform: AnyCPU
+		Created directory "bin/Release/"
+
+Target ResolveAssemblyReferences:
+
+Target CoreCompile:
+	Skipping target "CoreCompile" because its outputs are up-to-date.
+
+Target Build:
+
+Build succeeded.
+	 0 Warning(s)
+	 0 Error(s)
+
+Time Elapsed 00:00:00.1500020

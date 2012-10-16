@@ -1,0 +1,219 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7EFB056-B012-4A9D-9F11-4A878E5F7D61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BePoE</RootNamespace>
+    <AssemblyName>BetterPoEditor</AssemblyName>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IO\Defs.cs" />
+    <Compile Include="IO\TextLine.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmInfo.Designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmSelectCodePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmSelectCodePage.Designer.cs">
+      <DependentUpon>frmSelectCodePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmSelectLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmSelectLanguage.Designer.cs">
+      <DependentUpon>frmSelectLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmEntryMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmEntryMessages.Designer.cs">
+      <DependentUpon>frmEntryMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PO\Line.cs" />
+    <Compile Include="PO\File.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmOptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmSearch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmSelectCodePage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectCodePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmSelectLanguage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmEntryMessages.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEntryMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="dictionaries\de-DE.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dictionaries\en-AU.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dictionaries\en-CA.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dictionaries\en-GB.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dictionaries\en-US.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dictionaries\es-ES.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dictionaries\es-MX.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dictionaries\fr-FR.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dictionaries\it-IT.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="PO\Entry.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="IO\TextFile.cs" />
+    <Compile Include="Utils\Text.cs" />
+    <Compile Include="Utils\Gfx.cs" />
+    <Compile Include="Utils\Tidy.cs" />
+    <Compile Include="Utils\SpellCheck.cs" />
+    <Compile Include="Utils\Translator.cs" />
+    <Compile Include="Vars.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dictionaries\readme.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pofile.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\libgettextlib-0-17.dll" Condition=" '$(OS)' == 'Windows_NT' ">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\libgettextsrc-0-17.dll" Condition=" '$(OS)' == 'Windows_NT' ">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\libintl-8.dll" Condition=" '$(OS)' == 'Windows_NT' ">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\msgfmt.exe" Condition=" '$(OS)' == 'Windows_NT' ">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jayrock.Json\Jayrock.Json.csproj">
+      <Project>{F10A6A7D-B8E4-4F8B-8BD9-5B42ACE5520E}</Project>
+      <Name>Jayrock.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetSpell.SpellChecker\NetSpell.SpellChecker.csproj">
+      <Project>{A426EE0B-E52E-4D74-AF24-06797142D7B2}</Project>
+      <Name>NetSpell.SpellChecker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TidyNet\TidyNet.csproj">
+      <Project>{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}</Project>
+      <Name>TidyNet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

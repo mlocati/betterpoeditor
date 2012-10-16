@@ -1,0 +1,23 @@
+XBuild Engine Version 0.1
+Mono, Version 2.0.1.0
+Copyright (C) Marek Sieradzki 2005. All rights reserved.
+
+Build started 07/01/2010 13:33:13.
+__________________________________________________
+Project "/mnt/bepoe/src/NetSpell-SpellChecker/NetSpell-SpellChecker.csproj" (Build target(s)):
+
+Target PrepareForBuild:
+		Configuration: Release Platform: AnyCPU
+		Created directory "bin/Release/"
+
+Target ResolveAssemblyReferences:
+
+Target CoreCompile:
+		Tool /usr/bin/gmcs execution started with arguments: /noconfig /delaysign- /debug- /optimize+ /out:bin/Release/NetSpell.SpellChecker.dll AssemblyInfo.cs Dictionary/Affix/AffixEntry.cs Dictionary/Affix/AffixEntryCollection.cs Dictionary/Affix/AffixEntryEnumerator.cs Dictionary/Affix/AffixRule.cs Dictionary/Affix/AffixRuleCollection.cs Dictionary/Affix/AffixRuleEnumerator.cs Dictionary/Affix/AffixUtility.cs Dictionary/Phonetic/PhoneticRule.cs Dictionary/Phonetic/PhoneticRuleCollection.cs Dictionary/Phonetic/PhoneticRuleEnumerator.cs Dictionary/Phonetic/PhoneticUtility.cs Dictionary/Word.cs Dictionary/WordDictionary.cs Forms/OptionsForm.cs Forms/SuggestionForm.cs ReplaceWordEventArgs.cs Spelling.cs SpellingEventArgs.cs TraceWriter.cs /target:library /warnaserror- /unsafe- /checked- /define:TRACE /reference:/usr/lib/mono/gac/System/2.0.0.0__b77a5c561934e089/System.dll /reference:/usr/lib/mono/gac/System.Data/2.0.0.0__b77a5c561934e089/System.Data.dll /reference:/usr/lib/mono/gac/System.Design/2.0.0.0__b03f5f7f11d50a3a/System.Design.dll /reference:/usr/lib/mono/gac/System.Drawing/2.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll /reference:/usr/lib/mono/gac/System.Web/2.0.0.0__b03f5f7f11d50a3a/System.Web.dll /reference:/usr/lib/mono/gac/System.Windows.Forms/2.0.0.0__b77a5c561934e089/System.Windows.Forms.dll /reference:/usr/lib/mono/gac/System.Xml/2.0.0.0__b77a5c561934e089/System.Xml.dll /warn:4
+:  error CS1548:  Error during assembly signing. The specified file `..\..\Spell.snk' does not exist
+
+Build succeeded.
+	 0 Warning(s)
+	 2 Error(s)
+
+Time Elapsed 00:00:00.7700120

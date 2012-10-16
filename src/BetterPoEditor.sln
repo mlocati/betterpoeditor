@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterPoEditor", "BetterPoEditor\BetterPoEditor.csproj", "{E7EFB056-B012-4A9D-9F11-4A878E5F7D61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jayrock.Json", "Jayrock.Json\Jayrock.Json.csproj", "{F10A6A7D-B8E4-4F8B-8BD9-5B42ACE5520E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSpell.SpellChecker", "NetSpell.SpellChecker\NetSpell.SpellChecker.csproj", "{A426EE0B-E52E-4D74-AF24-06797142D7B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSpell.DictionaryBuild", "NetSpell.DictionaryBuild\NetSpell.DictionaryBuild.csproj", "{1A1420D4-99BA-4755-9D54-F920BA435D64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidyNet", "TidyNet\TidyNet.csproj", "{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7EFB056-B012-4A9D-9F11-4A878E5F7D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7EFB056-B012-4A9D-9F11-4A878E5F7D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7EFB056-B012-4A9D-9F11-4A878E5F7D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7EFB056-B012-4A9D-9F11-4A878E5F7D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F10A6A7D-B8E4-4F8B-8BD9-5B42ACE5520E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10A6A7D-B8E4-4F8B-8BD9-5B42ACE5520E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10A6A7D-B8E4-4F8B-8BD9-5B42ACE5520E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10A6A7D-B8E4-4F8B-8BD9-5B42ACE5520E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A426EE0B-E52E-4D74-AF24-06797142D7B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A426EE0B-E52E-4D74-AF24-06797142D7B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A426EE0B-E52E-4D74-AF24-06797142D7B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A426EE0B-E52E-4D74-AF24-06797142D7B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1420D4-99BA-4755-9D54-F920BA435D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1420D4-99BA-4755-9D54-F920BA435D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1420D4-99BA-4755-9D54-F920BA435D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1420D4-99BA-4755-9D54-F920BA435D64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

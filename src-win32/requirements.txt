@@ -1,0 +1,12 @@
+To build the program from source you need the Microsoft .NET Framework version 2.0 redistributable package.
+
+For 32 bit systems you can get it here:
+http://www.microsoft.com/downloads/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5&displaylang=en
+
+For 64 bit systems you can get it here:
+http://www.microsoft.com/downloads/details.aspx?familyid=b44a0000-acf8-4fa1-affb-40e78d788b00&displaylang=en
+
+
+To build the setup program you need Inno Setup, that can be found here:
+http://www.jrsoftware.org/isinfo.php
+You need the ISPP (Inno Setup Preprocessor). The simplest procedure to get all working is to use the QuickStart Pack
