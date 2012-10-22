@@ -4,6 +4,7 @@
 # BetterPoEditor generated binaries and objects
 /src/BetterPoEditor/bin/
 /src/BetterPoEditor/obj/
+/bin-win32/
 
 # Jayrock.Json generated binaries and objects
 /src/Jayrock.Json/bin/
