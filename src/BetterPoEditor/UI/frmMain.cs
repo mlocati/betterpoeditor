@@ -829,7 +829,7 @@ namespace BePoE.UI
 			StringBuilder sb = new StringBuilder(Application.ProductName);
 			if (this.CurrentPO == null)
 			{
-				sb.Append(" v").Append(Application.ProductVersion);
+				sb.Append(" v").Append(Program.VERSION);
 			}
 			else
 			{
@@ -1129,7 +1129,7 @@ namespace BePoE.UI
 
 
 
-		private void lnkGoogleTranslate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		private void lnkAutoTranslate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			TextBox from = this.TabbedTexts[TranslPlace.Source].TextBox;
 			if (from == null)
@@ -1139,7 +1139,8 @@ namespace BePoE.UI
 				to = null;
 			try
 			{
-				string translated = Utils.Translator.Translate("en", this.CurrentPO.Language.TwoLetterISOLanguageName, from.Text);
+				//string translated = Utils.Translator.Translate("en", this.CurrentPO.Language.TwoLetterISOLanguageName, from.Text);
+				string translated = Utils.BingTranslator.Translate("en", this.CurrentPO.Language.TwoLetterISOLanguageName, from.Text);
 				if (string.IsNullOrEmpty(translated))
 				{
 					MessageBox.Show("Not translated.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

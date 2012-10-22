@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -46,6 +47,8 @@ namespace BePoE.UI
 			this.SetColors(Program.Vars.Colors);
 			FontSet(this.lnkFontSource, Program.Vars.SourceFont);
 			FontSet(this.lnkFontTranslation, Program.Vars.TranslatedFont);
+			this.tbxBingTranslatorClientID.Text = Program.Vars.BingTranslatorClientID;
+			this.tbxBingTranslatorClientSecret.Text = Program.Vars.BingTranslatorClientSecret;
 		}
 		private static void FontSet(LinkLabel lnk, Font font)
 		{
@@ -148,7 +151,34 @@ namespace BePoE.UI
 				FocalizeControl(this.tbxMOCompilerParams);
 				return false;
 			}
-
+			string btClientID = this.tbxBingTranslatorClientID.Text.Trim();
+			string btClientSecret = this.tbxBingTranslatorClientSecret.Text.Trim();
+			if ((btClientID.Length > 0) || (btClientSecret.Length > 0))
+			{
+				if ((btClientID.Length == 0) || (btClientSecret.Length == 0))
+				{
+					MessageBox.Show("You have to specify both the client ID and the client secret for Bing translator to enable it (or none of both to disable it).", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					if (btClientSecret.Length == 0)
+					{
+						FocalizeControl(this.tbxBingTranslatorClientSecret);
+					}
+					else
+					{
+						FocalizeControl(this.tbxBingTranslatorClientID);
+					}
+					return false;
+				}
+				try
+				{
+					Utils.BingTranslator.CheckAccessParameters(btClientID, btClientSecret);
+				}
+				catch (Exception x)
+				{
+					MessageBox.Show(string.Format("Error verifying the Bing translator parameters:{0}{1}", Environment.NewLine, x.Message), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					FocalizeControl(this.tbxBingTranslatorClientID);
+					return false;
+				}
+			}
 			Program.Vars.CompileOnSave = this.chkCompileOnSave.Checked;
 			Program.Vars.MaxSearchResults = Convert.ToInt32(Math.Round(this.nudMaxSearchResults.Value));
 			Program.Vars.ViewerPath = viewerName;
@@ -161,7 +191,10 @@ namespace BePoE.UI
 			}
 			Program.Vars.SourceFont = this.lnkFontSource.Font;
 			Program.Vars.TranslatedFont = this.lnkFontTranslation.Font;
+			Program.Vars.BingTranslatorClientID = btClientID;
+			Program.Vars.BingTranslatorClientSecret = btClientSecret;
 			Program.Vars.Save();
+
 			return true;
 		}
 
@@ -290,6 +323,39 @@ namespace BePoE.UI
 			string fn = InitFilePicker(this, this.ofdViewer, this.tbxMOCompilerPath.Text, new FileInfo(Application.ExecutablePath).Directory.FullName);
 			if (fn != null)
 				this.tbxMOCompilerPath.Text = fn;
+		}
+
+		private void linkLabelTag_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Control c = sender as Control;
+			if (c != null)
+			{
+				string url = c.Tag as string;
+				if (!string.IsNullOrEmpty(url))
+				{
+					try
+					{
+						Process.Start(url);
+					}
+					catch (Exception x)
+					{
+						MessageBox.Show(x.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
+			}
+		}
+
+		private void lnkBTSampleURI_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			try
+			{
+				Clipboard.SetText(((Control)sender).Text);
+				MessageBox.Show("Text copied to the system clipboard", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			catch (Exception x)
+			{
+				MessageBox.Show(x.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 	}
 }

@@ -82,7 +82,7 @@
 			this.tbxTranslatorComment = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.lnkTranslatorComment = new System.Windows.Forms.LinkLabel();
-			this.lnkGoogleTranslate = new System.Windows.Forms.LinkLabel();
+			this.lnkAutoTranslate = new System.Windows.Forms.LinkLabel();
 			this.ssStatus = new System.Windows.Forms.StatusStrip();
 			this.sslStatus = new System.Windows.Forms.ToolStripStatusLabel();
 			this.sslProgr = new System.Windows.Forms.ToolStripStatusLabel();
@@ -138,7 +138,7 @@
 			this.tsTools.Location = new System.Drawing.Point(0, 0);
 			this.tsTools.Name = "tsTools";
 			this.tsTools.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-			this.tsTools.Size = new System.Drawing.Size(800, 52);
+			this.tsTools.Size = new System.Drawing.Size(800, 54);
 			this.tsTools.TabIndex = 0;
 			// 
 			// tsiOpen
@@ -200,14 +200,14 @@
             this.mniFileFormat_LineEndings_Windows,
             this.mniFileFormat_LineEndings_Mac});
 			this.mniFileFormat_LineEndings.Name = "mniFileFormat_LineEndings";
-			this.mniFileFormat_LineEndings.Size = new System.Drawing.Size(128, 22);
+			this.mniFileFormat_LineEndings.Size = new System.Drawing.Size(136, 22);
 			this.mniFileFormat_LineEndings.Text = "Line ending";
 			// 
 			// mniFileFormat_LineEndings_Linux
 			// 
 			this.mniFileFormat_LineEndings_Linux.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_LineEndings_Linux.Name = "mniFileFormat_LineEndings_Linux";
-			this.mniFileFormat_LineEndings_Linux.Size = new System.Drawing.Size(151, 22);
+			this.mniFileFormat_LineEndings_Linux.Size = new System.Drawing.Size(161, 22);
 			this.mniFileFormat_LineEndings_Linux.Text = "Linux / new Mac";
 			this.mniFileFormat_LineEndings_Linux.Click += new System.EventHandler(this.mniFileFormat_LineEndings_Linux_Click);
 			// 
@@ -215,7 +215,7 @@
 			// 
 			this.mniFileFormat_LineEndings_Windows.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_LineEndings_Windows.Name = "mniFileFormat_LineEndings_Windows";
-			this.mniFileFormat_LineEndings_Windows.Size = new System.Drawing.Size(151, 22);
+			this.mniFileFormat_LineEndings_Windows.Size = new System.Drawing.Size(161, 22);
 			this.mniFileFormat_LineEndings_Windows.Text = "Windows";
 			this.mniFileFormat_LineEndings_Windows.Click += new System.EventHandler(this.mniFileFormat_LineEndings_Windows_Click);
 			// 
@@ -223,7 +223,7 @@
 			// 
 			this.mniFileFormat_LineEndings_Mac.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_LineEndings_Mac.Name = "mniFileFormat_LineEndings_Mac";
-			this.mniFileFormat_LineEndings_Mac.Size = new System.Drawing.Size(151, 22);
+			this.mniFileFormat_LineEndings_Mac.Size = new System.Drawing.Size(161, 22);
 			this.mniFileFormat_LineEndings_Mac.Text = "Old Mac";
 			this.mniFileFormat_LineEndings_Mac.Click += new System.EventHandler(this.mniFileFormat_LineEndings_Mac_Click);
 			// 
@@ -239,14 +239,14 @@
             this.mniFileFormat_Encoding_UTF32_LE,
             this.mniFileFormat_Encoding_ANSI});
 			this.mniFileFormat_Encoding.Name = "mniFileFormat_Encoding";
-			this.mniFileFormat_Encoding.Size = new System.Drawing.Size(128, 22);
+			this.mniFileFormat_Encoding.Size = new System.Drawing.Size(136, 22);
 			this.mniFileFormat_Encoding.Text = "Encoding";
 			// 
 			// mniFileFormat_Encoding_UTF8_NoBOM
 			// 
 			this.mniFileFormat_Encoding_UTF8_NoBOM.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_Encoding_UTF8_NoBOM.Name = "mniFileFormat_Encoding_UTF8_NoBOM";
-			this.mniFileFormat_Encoding_UTF8_NoBOM.Size = new System.Drawing.Size(176, 22);
+			this.mniFileFormat_Encoding_UTF8_NoBOM.Size = new System.Drawing.Size(188, 22);
 			this.mniFileFormat_Encoding_UTF8_NoBOM.Text = "UTF-8 (without BOM)";
 			this.mniFileFormat_Encoding_UTF8_NoBOM.Click += new System.EventHandler(this.mniFileFormat_Encoding_UTF8_NoBOM_Click);
 			// 
@@ -254,7 +254,7 @@
 			// 
 			this.mniFileFormat_Encoding_UTF8_BOM.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_Encoding_UTF8_BOM.Name = "mniFileFormat_Encoding_UTF8_BOM";
-			this.mniFileFormat_Encoding_UTF8_BOM.Size = new System.Drawing.Size(176, 22);
+			this.mniFileFormat_Encoding_UTF8_BOM.Size = new System.Drawing.Size(188, 22);
 			this.mniFileFormat_Encoding_UTF8_BOM.Text = "UTF-8 (with BOM)";
 			this.mniFileFormat_Encoding_UTF8_BOM.Click += new System.EventHandler(this.mniFileFormat_Encoding_UTF8_BOM_Click);
 			// 
@@ -262,7 +262,7 @@
 			// 
 			this.mniFileFormat_Encoding_UTF16_BE.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_Encoding_UTF16_BE.Name = "mniFileFormat_Encoding_UTF16_BE";
-			this.mniFileFormat_Encoding_UTF16_BE.Size = new System.Drawing.Size(176, 22);
+			this.mniFileFormat_Encoding_UTF16_BE.Size = new System.Drawing.Size(188, 22);
 			this.mniFileFormat_Encoding_UTF16_BE.Text = "UTF-16 (big-endian)";
 			this.mniFileFormat_Encoding_UTF16_BE.Click += new System.EventHandler(this.mniFileFormat_Encoding_UTF16_BE_Click);
 			// 
@@ -270,7 +270,7 @@
 			// 
 			this.mniFileFormat_Encoding_UTF16_LE.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_Encoding_UTF16_LE.Name = "mniFileFormat_Encoding_UTF16_LE";
-			this.mniFileFormat_Encoding_UTF16_LE.Size = new System.Drawing.Size(176, 22);
+			this.mniFileFormat_Encoding_UTF16_LE.Size = new System.Drawing.Size(188, 22);
 			this.mniFileFormat_Encoding_UTF16_LE.Text = "UTF-16 (little-endian)";
 			this.mniFileFormat_Encoding_UTF16_LE.Click += new System.EventHandler(this.mniFileFormat_Encoding_UTF16_LE_Click);
 			// 
@@ -278,7 +278,7 @@
 			// 
 			this.mniFileFormat_Encoding_UTF32_BE.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_Encoding_UTF32_BE.Name = "mniFileFormat_Encoding_UTF32_BE";
-			this.mniFileFormat_Encoding_UTF32_BE.Size = new System.Drawing.Size(176, 22);
+			this.mniFileFormat_Encoding_UTF32_BE.Size = new System.Drawing.Size(188, 22);
 			this.mniFileFormat_Encoding_UTF32_BE.Text = "UTF-32 (big-endian)";
 			this.mniFileFormat_Encoding_UTF32_BE.Click += new System.EventHandler(this.mniFileFormat_Encoding_UTF32_BE_Click);
 			// 
@@ -286,7 +286,7 @@
 			// 
 			this.mniFileFormat_Encoding_UTF32_LE.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_Encoding_UTF32_LE.Name = "mniFileFormat_Encoding_UTF32_LE";
-			this.mniFileFormat_Encoding_UTF32_LE.Size = new System.Drawing.Size(176, 22);
+			this.mniFileFormat_Encoding_UTF32_LE.Size = new System.Drawing.Size(188, 22);
 			this.mniFileFormat_Encoding_UTF32_LE.Text = "UTF-32 (little-endian)";
 			this.mniFileFormat_Encoding_UTF32_LE.Click += new System.EventHandler(this.mniFileFormat_Encoding_UTF32_LE_Click);
 			// 
@@ -294,7 +294,7 @@
 			// 
 			this.mniFileFormat_Encoding_ANSI.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
 			this.mniFileFormat_Encoding_ANSI.Name = "mniFileFormat_Encoding_ANSI";
-			this.mniFileFormat_Encoding_ANSI.Size = new System.Drawing.Size(176, 22);
+			this.mniFileFormat_Encoding_ANSI.Size = new System.Drawing.Size(188, 22);
 			this.mniFileFormat_Encoding_ANSI.Text = "ANSI";
 			// 
 			// tsiOptions
@@ -303,7 +303,7 @@
 			this.tsiOptions.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.tsiOptions.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsiOptions.Name = "tsiOptions";
-			this.tsiOptions.Size = new System.Drawing.Size(48, 49);
+			this.tsiOptions.Size = new System.Drawing.Size(53, 51);
 			this.tsiOptions.Text = "Options";
 			this.tsiOptions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.tsiOptions.Click += new System.EventHandler(this.tsiOptions_Click);
@@ -314,7 +314,7 @@
 			this.tsiInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.tsiInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsiInfo.Name = "tsiInfo";
-			this.tsiInfo.Size = new System.Drawing.Size(40, 49);
+			this.tsiInfo.Size = new System.Drawing.Size(44, 51);
 			this.tsiInfo.Text = "About";
 			this.tsiInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.tsiInfo.Click += new System.EventHandler(this.tsiInfo_Click);
@@ -322,7 +322,7 @@
 			// tsiSep0
 			// 
 			this.tsiSep0.Name = "tsiSep0";
-			this.tsiSep0.Size = new System.Drawing.Size(6, 52);
+			this.tsiSep0.Size = new System.Drawing.Size(6, 54);
 			// 
 			// tsiView_Untranslated
 			// 
@@ -368,7 +368,7 @@
 			// tsiSep1
 			// 
 			this.tsiSep1.Name = "tsiSep1";
-			this.tsiSep1.Size = new System.Drawing.Size(6, 52);
+			this.tsiSep1.Size = new System.Drawing.Size(6, 54);
 			// 
 			// tsiView_Fuzzy
 			// 
@@ -393,7 +393,7 @@
 			this.tsiView_Clear.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.tsiView_Clear.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsiView_Clear.Name = "tsiView_Clear";
-			this.tsiView_Clear.Size = new System.Drawing.Size(36, 49);
+			this.tsiView_Clear.Size = new System.Drawing.Size(38, 51);
 			this.tsiView_Clear.Text = "Clear";
 			this.tsiView_Clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.tsiView_Clear.ToolTipText = "Show items that are not marked as \'fuzzy\'";
@@ -402,7 +402,7 @@
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 52);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
 			// 
 			// tsiSearch
 			// 
@@ -410,7 +410,7 @@
 			this.tsiSearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.tsiSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsiSearch.Name = "tsiSearch";
-			this.tsiSearch.Size = new System.Drawing.Size(44, 49);
+			this.tsiSearch.Size = new System.Drawing.Size(46, 51);
 			this.tsiSearch.Text = "Search";
 			this.tsiSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.tsiSearch.Click += new System.EventHandler(this.tsiSearch_Click);
@@ -466,7 +466,7 @@
 			this.scEntry.Panel2.Controls.Add(this.chkFuzzyTranslation);
 			this.scEntry.Panel2.Controls.Add(this.scTranslation);
 			this.scEntry.Panel2.Controls.Add(this.lnkTranslatorComment);
-			this.scEntry.Panel2.Controls.Add(this.lnkGoogleTranslate);
+			this.scEntry.Panel2.Controls.Add(this.lnkAutoTranslate);
 			this.scEntry.Size = new System.Drawing.Size(543, 374);
 			this.scEntry.SplitterDistance = 141;
 			this.scEntry.TabIndex = 0;
@@ -731,17 +731,17 @@
 			this.lnkTranslatorComment.Text = "Translator comment";
 			this.lnkTranslatorComment.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkTranslatorComment_LinkClicked);
 			// 
-			// lnkGoogleTranslate
+			// lnkAutoTranslate
 			// 
-			this.lnkGoogleTranslate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.lnkGoogleTranslate.AutoSize = true;
-			this.lnkGoogleTranslate.Location = new System.Drawing.Point(59, 211);
-			this.lnkGoogleTranslate.Name = "lnkGoogleTranslate";
-			this.lnkGoogleTranslate.Size = new System.Drawing.Size(84, 13);
-			this.lnkGoogleTranslate.TabIndex = 2;
-			this.lnkGoogleTranslate.TabStop = true;
-			this.lnkGoogleTranslate.Text = "Google translate";
-			this.lnkGoogleTranslate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGoogleTranslate_LinkClicked);
+			this.lnkAutoTranslate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lnkAutoTranslate.AutoSize = true;
+			this.lnkAutoTranslate.Location = new System.Drawing.Point(59, 211);
+			this.lnkAutoTranslate.Name = "lnkAutoTranslate";
+			this.lnkAutoTranslate.Size = new System.Drawing.Size(71, 13);
+			this.lnkAutoTranslate.TabIndex = 2;
+			this.lnkAutoTranslate.TabStop = true;
+			this.lnkAutoTranslate.Text = "Bing translate";
+			this.lnkAutoTranslate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAutoTranslate_LinkClicked);
 			// 
 			// ssStatus
 			// 
@@ -868,7 +868,7 @@
 		private System.Windows.Forms.TabPage tpSource0;
 		private System.Windows.Forms.TextBox tbxSource0;
 		private System.Windows.Forms.TextBox tbxTranslated0;
-		private System.Windows.Forms.LinkLabel lnkGoogleTranslate;
+		private System.Windows.Forms.LinkLabel lnkAutoTranslate;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton tsiSearch;
 		private System.Windows.Forms.TextBox tbxSourceContext;

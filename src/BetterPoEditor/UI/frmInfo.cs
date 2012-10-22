@@ -18,7 +18,7 @@ namespace BePoE.UI
 			Utils.Gfx.SetFormIcon(this);
 			this.Text = string.Format("About {0}", Application.ProductName);
 			this.lblProduct.Text = Application.ProductName;
-			this.lblVersion.Text = Application.ProductVersion;
+			this.lblVersion.Text = Program.VERSION;
 			DataTable dt = new DataTable();
 			dt.Columns.Add(new DataColumn("Key", typeof(string)));
 			dt.Columns.Add(new DataColumn("Meaning", typeof(string)));

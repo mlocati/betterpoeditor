@@ -431,5 +431,33 @@ namespace BePoE
 				return Vars._defaultColors;
 			}
 		}
+
+		[UserScopedSetting, DefaultSettingValue("")]
+		public string BingTranslatorClientID
+		{
+			get
+			{
+				string s = this["BingTranslatorClientID"] as string;
+				return (s == null) ? "" : s;
+			}
+			set
+			{
+				this["BingTranslatorClientID"] = (value == null) ? "" : value;
+			}
+		}
+
+		[UserScopedSetting, DefaultSettingValue("")]
+		public string BingTranslatorClientSecret
+		{
+			get
+			{
+				string s = this["BingTranslatorClientSecret"] as string;
+				return (s == null) ? "" : s;
+			}
+			set
+			{
+				this["BingTranslatorClientSecret"] = (value == null) ? "" : value;
+			}
+		}
 	}
 }

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "BetterPoEditor"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.1"
 #define MyAppPublisher "Michele Locati"
 #define MyAppURL "http://www.locati.it"
 #define MyAppExeName "BetterPoEditor.exe"

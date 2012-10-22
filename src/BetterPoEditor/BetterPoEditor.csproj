@@ -163,6 +163,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="IO\TextFile.cs" />
+    <Compile Include="Utils\BingTranslator.cs" />
     <Compile Include="Utils\Text.cs" />
     <Compile Include="Utils\Gfx.cs" />
     <Compile Include="Utils\Tidy.cs" />
