@@ -163,6 +163,19 @@ namespace BePoE
 		}
 
 		[UserScopedSetting]
+		public string FlattenSpecialChars
+		{
+			get
+			{
+				return this["FlattenSpecialChars"] as string;
+			}
+			set
+			{
+				this["FlattenSpecialChars"] = value;
+			}
+		}
+
+		[UserScopedSetting]
 		public Font SourceFont
 		{
 			get
@@ -352,12 +365,63 @@ namespace BePoE
 			}
 		}
 
+		private List<KeyValuePair<string, string>> _specialChars = null;
+		public List<KeyValuePair<string, string>> SpecialChars
+		{
+			get
+			{
+				if (this._specialChars == null)
+				{
+					List<KeyValuePair<string, string>> ris = new List<KeyValuePair<string, string>>();
+					string flattenSpecialCharsList = this.FlattenSpecialChars;
+					if (!string.IsNullOrEmpty(flattenSpecialCharsList))
+					{
+						foreach(string flattenSpecialChar in flattenSpecialCharsList.Split('\x01'))
+						{
+							if(!string.IsNullOrEmpty(flattenSpecialChar)) {
+								int p = flattenSpecialChar.IndexOf('\x02');
+								if ((p > 0) && (p < (flattenSpecialChar.Length - 1)))
+								{
+									string name = flattenSpecialChar.Substring(0, p).Trim();
+									string sc = flattenSpecialChar.Substring(p + 1);
+									if ((name.Length > 0) && (sc.Length > 0))
+									{
+										ris.Add(new KeyValuePair<string, string>(name, sc));
+									}
+								}
+							}
+						}
+					}
+					this._specialChars = ris;
+				}
+				return this._specialChars;
+			}
+			set
+			{
+				this._specialChars = (value == null) ? new List<KeyValuePair<string, string>>() : value;
+			}
+		}
+
 		public override void Save()
 		{
 			List<string> colors = new List<string>(this.Colors.Count);
 			foreach (KeyValuePair<ColorEnviroPlace, Color> kv in this.Colors)
 				colors.Add(string.Format("{0}|{1}:{2},{3},{4}", (int)kv.Key.Enviro, (int)kv.Key.Place, kv.Value.R, kv.Value.G, kv.Value.B));
 			this["FlattenColors"] = colors.ToArray();
+			StringBuilder specialChars = null;
+			foreach (KeyValuePair<string, string> kv in this.SpecialChars)
+			{
+				if (specialChars == null)
+				{
+					specialChars = new StringBuilder();
+				}
+				else
+				{
+					specialChars.Append('\x01');
+				}
+				specialChars.Append(kv.Key).Append('\x02').Append(kv.Value);
+			}
+			this.FlattenSpecialChars = (specialChars == null) ? "" : specialChars.ToString();
 			base.Save();
 		}
 

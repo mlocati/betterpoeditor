@@ -110,6 +110,8 @@
 			this.label41 = new System.Windows.Forms.Label();
 			this.label42 = new System.Windows.Forms.Label();
 			this.label43 = new System.Windows.Forms.Label();
+			this.tpSpecialChars = new System.Windows.Forms.TabPage();
+			this.dgvSpecialChars = new System.Windows.Forms.DataGridView();
 			this.ofdViewer = new System.Windows.Forms.OpenFileDialog();
 			this.ofdMOCompiler = new System.Windows.Forms.OpenFileDialog();
 			this.tlpColors.SuspendLayout();
@@ -126,6 +128,8 @@
 			this.tpBingTranslator.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.flpBing.SuspendLayout();
+			this.tpSpecialChars.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvSpecialChars)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnKo
@@ -346,6 +350,7 @@
 			this.tcTabs.Controls.Add(this.tpAppearance);
 			this.tcTabs.Controls.Add(this.tpPaths);
 			this.tcTabs.Controls.Add(this.tpBingTranslator);
+			this.tcTabs.Controls.Add(this.tpSpecialChars);
 			this.tcTabs.Location = new System.Drawing.Point(12, 12);
 			this.tcTabs.Name = "tcTabs";
 			this.tcTabs.SelectedIndex = 0;
@@ -1111,6 +1116,30 @@
 			this.label43.TabIndex = 29;
 			this.label43.Text = "Enter below the above values:";
 			// 
+			// tpSpecialChars
+			// 
+			this.tpSpecialChars.Controls.Add(this.dgvSpecialChars);
+			this.tpSpecialChars.Location = new System.Drawing.Point(4, 22);
+			this.tpSpecialChars.Name = "tpSpecialChars";
+			this.tpSpecialChars.Padding = new System.Windows.Forms.Padding(3);
+			this.tpSpecialChars.Size = new System.Drawing.Size(483, 323);
+			this.tpSpecialChars.TabIndex = 5;
+			this.tpSpecialChars.Text = "Special chars";
+			this.tpSpecialChars.UseVisualStyleBackColor = true;
+			// 
+			// dgvSpecialChars
+			// 
+			this.dgvSpecialChars.AllowUserToResizeRows = false;
+			this.dgvSpecialChars.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+							| System.Windows.Forms.AnchorStyles.Left)
+							| System.Windows.Forms.AnchorStyles.Right)));
+			this.dgvSpecialChars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvSpecialChars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvSpecialChars.Location = new System.Drawing.Point(6, 6);
+			this.dgvSpecialChars.Name = "dgvSpecialChars";
+			this.dgvSpecialChars.Size = new System.Drawing.Size(471, 311);
+			this.dgvSpecialChars.TabIndex = 0;
+			// 
 			// ofdViewer
 			// 
 			this.ofdViewer.Filter = "Executable files|*.exe|All files|*.*";
@@ -1156,6 +1185,8 @@
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
+			this.tpSpecialChars.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvSpecialChars)).EndInit();
 			this.tpBingTranslator.ResumeLayout(false);
 			this.tpBingTranslator.PerformLayout();
 			this.tableLayoutPanel1.ResumeLayout(false);
@@ -1252,5 +1283,7 @@
 		private System.Windows.Forms.Label label45;
 		private System.Windows.Forms.Label label44;
 		private System.Windows.Forms.TextBox tbxBingTranslatorClientID;
+		private System.Windows.Forms.TabPage tpSpecialChars;
+		private System.Windows.Forms.DataGridView dgvSpecialChars;
 	}
 }

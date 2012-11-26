@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
 			this.ofdOpen = new System.Windows.Forms.OpenFileDialog();
 			this.tsTools = new System.Windows.Forms.ToolStrip();
@@ -72,6 +73,7 @@
 			this.tpReferences = new System.Windows.Forms.TabPage();
 			this.flpReferences = new System.Windows.Forms.FlowLayoutPanel();
 			this.lblSourceContext = new System.Windows.Forms.Label();
+			this.lnkSpecialChar = new System.Windows.Forms.LinkLabel();
 			this.lnkCheckTranslationSpelling = new System.Windows.Forms.LinkLabel();
 			this.lnkTidyTranslation = new System.Windows.Forms.LinkLabel();
 			this.chkFuzzyTranslation = new System.Windows.Forms.CheckBox();
@@ -88,6 +90,7 @@
 			this.sslProgr = new System.Windows.Forms.ToolStripStatusLabel();
 			this.ssbProgr = new System.Windows.Forms.ToolStripProgressBar();
 			this.fbdReference = new System.Windows.Forms.FolderBrowserDialog();
+			this.ctxSpecialChars = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.tsTools.SuspendLayout();
 			this.scItems.Panel1.SuspendLayout();
 			this.scItems.Panel2.SuspendLayout();
@@ -461,6 +464,7 @@
 			// 
 			// scEntry.Panel2
 			// 
+			this.scEntry.Panel2.Controls.Add(this.lnkSpecialChar);
 			this.scEntry.Panel2.Controls.Add(this.lnkCheckTranslationSpelling);
 			this.scEntry.Panel2.Controls.Add(this.lnkTidyTranslation);
 			this.scEntry.Panel2.Controls.Add(this.chkFuzzyTranslation);
@@ -603,6 +607,18 @@
 			this.lblSourceContext.Size = new System.Drawing.Size(43, 13);
 			this.lblSourceContext.TabIndex = 1;
 			this.lblSourceContext.Text = "Context";
+			// 
+			// lnkSpecialChar
+			// 
+			this.lnkSpecialChar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lnkSpecialChar.AutoSize = true;
+			this.lnkSpecialChar.Location = new System.Drawing.Point(385, 211);
+			this.lnkSpecialChar.Name = "lnkSpecialChar";
+			this.lnkSpecialChar.Size = new System.Drawing.Size(66, 13);
+			this.lnkSpecialChar.TabIndex = 6;
+			this.lnkSpecialChar.TabStop = true;
+			this.lnkSpecialChar.Text = "Special char";
+			this.lnkSpecialChar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSpecialChar_LinkClicked);
 			// 
 			// lnkCheckTranslationSpelling
 			// 
@@ -779,6 +795,12 @@
 			this.fbdReference.Description = "Select the base reference folder";
 			this.fbdReference.ShowNewFolderButton = false;
 			// 
+			// ctxSpecialChars
+			// 
+			this.ctxSpecialChars.Name = "ctxSpecialChars";
+			this.ctxSpecialChars.Size = new System.Drawing.Size(153, 26);
+			this.ctxSpecialChars.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ctxSpecialChars_ItemClicked);
+			// 
 			// frmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -888,5 +910,7 @@
 		private System.Windows.Forms.TabPage tpExtractedComment;
 		private System.Windows.Forms.TabPage tpReferences;
 		private System.Windows.Forms.FlowLayoutPanel flpReferences;
+		private System.Windows.Forms.LinkLabel lnkSpecialChar;
+		private System.Windows.Forms.ContextMenuStrip ctxSpecialChars;
 	}
 }

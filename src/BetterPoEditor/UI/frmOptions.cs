@@ -15,6 +15,47 @@ namespace BePoE.UI
 		public delegate void NewOptionsApplier();
 		private NewOptionsApplier _newOptionsApplier;
 		private Dictionary<ColorEnviroPlace, Label> _colorsLabels;
+		private BindingList<SpecialCharManager> _specialCharsData;
+		private CurrencyManager _specialCharsDataManager;
+
+		private class SpecialCharManager
+		{
+			private string _name;
+			private string _text;
+			public SpecialCharManager()
+				:this(null)
+			{}
+			public SpecialCharManager(KeyValuePair<string, string>? kv)
+			{
+				this._name = (kv.HasValue && (kv.Value.Key != null)) ? kv.Value.Key : "";
+				this._text = (kv.HasValue && (kv.Value.Value != null)) ? kv.Value.Value : "";
+			}
+			public string Name
+			{
+				get
+				{ return this._name; }
+				set
+				{ this._name = (value == null) ? "" : value; }
+			}
+			public string Text
+			{
+				get
+				{ return this._text; }
+				set
+				{ this._text = (value == null) ? "" : value; }
+			}
+			public KeyValuePair<string, string>? GetResult()
+			{
+				if (this._name.Length > 0 && this._text.Length > 0)
+				{
+					return new KeyValuePair<string, string>(this._name, this._text);
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
 		public frmOptions(NewOptionsApplier newOptionsApplier)
 		{
 			InitializeComponent();
@@ -28,6 +69,14 @@ namespace BePoE.UI
 			this.tbxMOCompilerPath.Text = Program.Vars.MOCompilerPath;
 			this.tbxMOCompilerParams.Text = Program.Vars.MOCompilerParameters;
 			this._colorsLabels = new Dictionary<ColorEnviroPlace, Label>();
+			List<SpecialCharManager> specialCharsData =  new List<SpecialCharManager>(Program.Vars.SpecialChars.Count);
+			foreach (KeyValuePair<string, string> kv in Program.Vars.SpecialChars)
+			{
+				specialCharsData.Add(new SpecialCharManager(kv));
+			}
+			this.dgvSpecialChars.AutoGenerateColumns = true;
+			this.dgvSpecialChars.DataSource = this._specialCharsData = new BindingList<SpecialCharManager>(specialCharsData);
+			this._specialCharsDataManager = (CurrencyManager)this.dgvSpecialChars.BindingContext[this._specialCharsData];
 			foreach (ColorEnviro enviro in Enum.GetValues(typeof(ColorEnviro)))
 			{
 				foreach (ColorPlace place in Enum.GetValues(typeof(ColorPlace)))
@@ -179,6 +228,16 @@ namespace BePoE.UI
 					return false;
 				}
 			}
+			List<KeyValuePair<string, string>> specialChars = new List<KeyValuePair<string, string>>();
+			foreach(SpecialCharManager scm in this._specialCharsData)
+			{
+				KeyValuePair<string, string>? kv = scm.GetResult();
+				if (kv.HasValue)
+				{
+					specialChars.Add(kv.Value);
+				}
+			}
+
 			Program.Vars.CompileOnSave = this.chkCompileOnSave.Checked;
 			Program.Vars.MaxSearchResults = Convert.ToInt32(Math.Round(this.nudMaxSearchResults.Value));
 			Program.Vars.ViewerPath = viewerName;
@@ -193,8 +252,8 @@ namespace BePoE.UI
 			Program.Vars.TranslatedFont = this.lnkFontTranslation.Font;
 			Program.Vars.BingTranslatorClientID = btClientID;
 			Program.Vars.BingTranslatorClientSecret = btClientSecret;
+			Program.Vars.SpecialChars = specialChars;
 			Program.Vars.Save();
-
 			return true;
 		}
 

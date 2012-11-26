@@ -202,6 +202,7 @@ namespace BePoE.UI
 			this.tsiOpenHistoryUpdated();
 			this.tbxSource0.Font = Program.Vars.SourceFont;
 			this.tbxTranslated0.Font = Program.Vars.TranslatedFont;
+			this.RefreshSpecialChars();
 		}
 
 		#endregion
@@ -999,6 +1000,7 @@ namespace BePoE.UI
 			this.lbxEntries.Refresh();
 			foreach (TabbedText tt in this.TabbedTexts.Values)
 				tt.OptionsApplied();
+			this.RefreshSpecialChars();
 		}
 
 		private void lbxEntries_SelectedIndexChanged(object sender, EventArgs e)
@@ -1709,6 +1711,42 @@ namespace BePoE.UI
 				string fn = Program.InitialFile;
 				Program.InitialFile = null;
 				this.LoadPOFile(fn, false);
+			}
+		}
+
+		private void RefreshSpecialChars()
+		{
+			this.ctxSpecialChars.Items.Clear();
+			foreach (KeyValuePair<string, string> kv in Program.Vars.SpecialChars)
+			{
+				ToolStripMenuItem i = new ToolStripMenuItem();
+				i.Text = kv.Key;
+				i.Tag = kv.Value;
+				this.ctxSpecialChars.Items.Add(i);
+			}
+			this.lnkSpecialChar.Enabled = this.ctxSpecialChars.Items.Count > 0;
+		}
+
+		private void ctxSpecialChars_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+			ToolStripMenuItem i = e.ClickedItem as ToolStripMenuItem;
+			if (i != null)
+			{
+				foreach (TextBox tb in this.TabbedTexts[TranslPlace.Translated].TextBoxes)
+				{
+					if (tb.Enabled && tb.Visible && (tb.Parent != null) && tb.Parent.Visible)
+					{
+						tb.Text = tb.Text.Insert(tb.SelectionStart, (string)i.Tag);
+					}
+				}
+			}
+		}
+
+		private void lnkSpecialChar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			if (this.lnkSpecialChar.Enabled)
+			{
+				this.ctxSpecialChars.Show(this.lnkSpecialChar, new Point(this.lnkSpecialChar.Width >> 1, this.lnkSpecialChar.Height >> 1));
 			}
 		}
 	}
