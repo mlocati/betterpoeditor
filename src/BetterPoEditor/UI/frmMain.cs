@@ -1736,7 +1736,22 @@ namespace BePoE.UI
 				{
 					if (tb.Enabled && tb.Visible && (tb.Parent != null) && tb.Parent.Visible)
 					{
-						tb.Text = tb.Text.Insert(tb.SelectionStart, (string)i.Tag);
+						string insertMe = (string)i.Tag;
+						int ss = tb.SelectionStart;
+						int sl = tb.SelectionLength;
+						string pre = (ss > 0) ? tb.Text.Substring(0, ss) : "";
+						string post = ((ss + sl) < (tb.Text.Length - 1)) ? tb.Text.Substring(ss + sl) : "";
+						tb.Text = pre + insertMe + post;
+						ss = pre.Length + insertMe.Length;
+						try
+						{ tb.Focus(); }
+						catch
+						{ }
+						try
+						{ tb.SelectionStart = ss; tb.SelectionLength = 0; }
+						catch
+						{ }
+						break;
 					}
 				}
 			}
