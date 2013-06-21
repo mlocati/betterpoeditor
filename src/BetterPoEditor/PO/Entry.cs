@@ -1661,15 +1661,23 @@ namespace BePoE.PO
 
 			#region Language
 			this._languageCode = "";
-			if (this._keys.ContainsKey("X-Language"))
+			foreach(string languageKey in new string[]{"Language", "X-Language"})
 			{
-				Match match = Regex.Match(this._keys["X-Language"], @"^(?<code>[a-z]{2})($|[_-](?<code2>[a-z]{2})$)", RegexOptions.CultureInvariant | RegexOptions.ExplicitCapture | RegexOptions.Singleline | RegexOptions.IgnoreCase);
-				if (match.Success)
+				if (this._keys.ContainsKey(languageKey))
 				{
-					if (string.IsNullOrEmpty(match.Groups["code2"].Value))
-						this._languageCode = match.Groups["code"].Value.ToLowerInvariant();
-					else
-						this._languageCode = string.Format("{0}-{1}", match.Groups["code"].Value.ToLowerInvariant(), match.Groups["code2"].Value.ToUpperInvariant());
+					Match match = Regex.Match(this._keys[languageKey], @"^(?<code>[a-z]{2})($|[_-](?<code2>[a-z]{2})$)", RegexOptions.CultureInvariant | RegexOptions.ExplicitCapture | RegexOptions.Singleline | RegexOptions.IgnoreCase);
+					if (match.Success)
+					{
+						if (string.IsNullOrEmpty(match.Groups["code2"].Value))
+						{
+							this._languageCode = match.Groups["code"].Value.ToLowerInvariant();
+						}
+						else
+						{
+							this._languageCode = string.Format("{0}-{1}", match.Groups["code"].Value.ToLowerInvariant(), match.Groups["code2"].Value.ToUpperInvariant());
+						}
+						break;
+					}
 				}
 			}
 			#endregion
