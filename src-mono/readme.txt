@@ -9,8 +9,9 @@ sudo apt-get install mono-runtime
 and
 sudo apt-get install libmono-winforms2.0-cil
 
-The application must be compiled for mono. For this you have to install both the following components:
+The application must be compiled for mono. For this you have to install the following components:
 
+sudo apt-get install mono-devel
 sudo apt-get install mono-xbuild
 sudo apt-get install mono-gmcs
 

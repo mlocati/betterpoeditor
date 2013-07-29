@@ -15,7 +15,7 @@ if [ $? = 0 ]; then
 					echo "ok."
 					RC=0
 				else
-					echo "xbuild failed.\n\nAre mono and xbuild installed? If not please do:\nsudo apt-get install mono-xbuild mono-gmcs\n\nFor more informations see the file\n${LOGFILE}"
+					echo "xbuild failed.\n\nAre mono and xbuild installed? If not please do:\nsudo apt-get install mono-devel mono-xbuild mono-gmcs\n\nFor more informations see the file\n${LOGFILE}"
 					RC=5
 				fi
 				cd ${MYFOLDER}
