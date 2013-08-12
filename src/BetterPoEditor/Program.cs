@@ -9,7 +9,7 @@ namespace BePoE
 {
 	static class Program
 	{
-		public const string VERSION = "1.1.1";
+		public const string VERSION = "1.2.0";
 		public static StringBuilder global = new StringBuilder();
 		internal static Vars Vars;
 		internal static Utils.SpellChecker SpellChecker;
