@@ -117,6 +117,14 @@ namespace BePoE.UI
 					this.UpdateSelectedEntry();
 					this._currentPO.DirtyChanged += this.CurrentPO_DirtyChanged;
 					this.tsiSearch.Enabled = true;
+					if (this._currentPO.TranslatedItems == this._currentPO.TotalDataEntries)
+					{
+						if (!this.tsiView_Translated.Checked)
+						{
+							this.tsiView_Translated.Checked = true;
+							this.RefreshViewedItems();
+						}
+					}
 				}
 				this.UpdateWindowTitle();
 			}
