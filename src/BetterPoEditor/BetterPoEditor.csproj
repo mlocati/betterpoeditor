@@ -178,15 +178,6 @@
     <Content Include="pofile.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="tools\libgettextlib-0-17.dll" Condition=" '$(OS)' == 'Windows_NT' ">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="tools\libgettextsrc-0-17.dll" Condition=" '$(OS)' == 'Windows_NT' ">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="tools\libintl-8.dll" Condition=" '$(OS)' == 'Windows_NT' ">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="tools\msgfmt.exe" Condition=" '$(OS)' == 'Windows_NT' ">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
