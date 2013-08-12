@@ -277,19 +277,6 @@ namespace BePoE
 				this["MOCompilerPath"] = (value == null) ? "" : value;
 			}
 		}
-		[UserScopedSetting, DefaultSettingValue("")]
-		public string MOCompilerParameters
-		{
-			get
-			{
-				string s = this["MOCompilerParameters"] as string;
-				return (s == null) ? "" : s;
-			}
-			set
-			{
-				this["MOCompilerParameters"] = (value == null) ? "" : value;
-			}
-		}
 
 		[UserScopedSetting, DefaultSettingValue("2000")]
 		public int MaxSearchResults
@@ -313,6 +300,41 @@ namespace BePoE
 			}
 		}
 
+		[UserScopedSetting, DefaultSettingValue("false")]
+		public bool MOCompiler_CheckFormat
+		{
+			get
+			{
+				object o = this["MOCompiler_CheckFormat"];
+				if (o is bool)
+				{
+					return (bool)o;
+				}
+				return false;
+			}
+			set
+			{
+				this["MOCompiler_CheckFormat"] = value;
+			}
+		}
+
+		[UserScopedSetting, DefaultSettingValue("false")]
+		public bool MOCompiler_CheckHeader
+		{
+			get
+			{
+				object o = this["MOCompiler_CheckHeader"];
+				if (o is bool)
+				{
+					return (bool)o;
+				}
+				return false;
+			}
+			set
+			{
+				this["MOCompiler_CheckHeader"] = value;
+			}
+		}
 
 		private Dictionary<ColorEnviroPlace, Color> _colors = null;
 		public Dictionary<ColorEnviroPlace, Color> Colors

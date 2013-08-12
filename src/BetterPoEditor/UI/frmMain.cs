@@ -1579,9 +1579,20 @@ namespace BePoE.UI
 					catch
 					{ }
 				}
-
+				List<string> moCompilerParameters = new List<string>();
+				if(Program.Vars.MOCompiler_CheckFormat)
+				{
+					moCompilerParameters.Add("--check-format");
+				}
+				if(Program.Vars.MOCompiler_CheckHeader)
+				{
+					moCompilerParameters.Add("--check-header");
+				}
+				moCompilerParameters.Add(string.Format("--output-file=\"{0}\"", tempFileNameDest));
+				moCompilerParameters.Add(string.Format("\"{0}\"", (tempFileNameSource == null) ? this.CurrentPO.TextFile.FileName : tempFileNameSource));
 				ProcessStartInfo psi = new ProcessStartInfo();
-				psi.Arguments = Program.Vars.MOCompilerParameters.Replace("%source%", (tempFileNameSource == null) ? this.CurrentPO.TextFile.FileName : tempFileNameSource).Replace("%destination%", tempFileNameDest);
+				
+				psi.Arguments = string.Join(" ", moCompilerParameters.ToArray());
 				psi.ErrorDialog = false;
 				psi.FileName = Program.Vars.MOCompilerPath;
 				psi.UseShellExecute = false;

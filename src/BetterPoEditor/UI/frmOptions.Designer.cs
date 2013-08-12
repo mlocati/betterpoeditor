@@ -48,8 +48,12 @@
 			this.fdPick = new System.Windows.Forms.FontDialog();
 			this.tcTabs = new System.Windows.Forms.TabControl();
 			this.tpGeneral = new System.Windows.Forms.TabPage();
-			this.nudMaxSearchResults = new System.Windows.Forms.NumericUpDown();
+			this.gbxVarious = new System.Windows.Forms.GroupBox();
 			this.label6 = new System.Windows.Forms.Label();
+			this.nudMaxSearchResults = new System.Windows.Forms.NumericUpDown();
+			this.gbxCompilation = new System.Windows.Forms.GroupBox();
+			this.chkCompileCheckHeader = new System.Windows.Forms.CheckBox();
+			this.chkCompileCheckFormat = new System.Windows.Forms.CheckBox();
 			this.chkCompileOnSave = new System.Windows.Forms.CheckBox();
 			this.tpAppearance = new System.Windows.Forms.TabPage();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -57,10 +61,6 @@
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.tpPaths = new System.Windows.Forms.TabPage();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label19 = new System.Windows.Forms.Label();
-			this.tbxMOCompilerParams = new System.Windows.Forms.TextBox();
-			this.label18 = new System.Windows.Forms.Label();
-			this.label17 = new System.Windows.Forms.Label();
 			this.btnMOCompilerPath = new System.Windows.Forms.Button();
 			this.tbxMOCompilerPath = new System.Windows.Forms.TextBox();
 			this.label20 = new System.Windows.Forms.Label();
@@ -117,7 +117,9 @@
 			this.tlpColors.SuspendLayout();
 			this.tcTabs.SuspendLayout();
 			this.tpGeneral.SuspendLayout();
+			this.gbxVarious.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudMaxSearchResults)).BeginInit();
+			this.gbxCompilation.SuspendLayout();
 			this.tpAppearance.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			this.tlpFonts.SuspendLayout();
@@ -359,9 +361,8 @@
 			// 
 			// tpGeneral
 			// 
-			this.tpGeneral.Controls.Add(this.nudMaxSearchResults);
-			this.tpGeneral.Controls.Add(this.label6);
-			this.tpGeneral.Controls.Add(this.chkCompileOnSave);
+			this.tpGeneral.Controls.Add(this.gbxVarious);
+			this.tpGeneral.Controls.Add(this.gbxCompilation);
 			this.tpGeneral.Location = new System.Drawing.Point(4, 22);
 			this.tpGeneral.Name = "tpGeneral";
 			this.tpGeneral.Padding = new System.Windows.Forms.Padding(3);
@@ -370,9 +371,31 @@
 			this.tpGeneral.Text = "General";
 			this.tpGeneral.UseVisualStyleBackColor = true;
 			// 
+			// gbxVarious
+			// 
+			this.gbxVarious.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+							| System.Windows.Forms.AnchorStyles.Right)));
+			this.gbxVarious.Controls.Add(this.label6);
+			this.gbxVarious.Controls.Add(this.nudMaxSearchResults);
+			this.gbxVarious.Location = new System.Drawing.Point(6, 111);
+			this.gbxVarious.Name = "gbxVarious";
+			this.gbxVarious.Size = new System.Drawing.Size(471, 100);
+			this.gbxVarious.TabIndex = 1;
+			this.gbxVarious.TabStop = false;
+			this.gbxVarious.Text = "Various";
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(6, 21);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(119, 13);
+			this.label6.TabIndex = 0;
+			this.label6.Text = "Maximum search results";
+			// 
 			// nudMaxSearchResults
 			// 
-			this.nudMaxSearchResults.Location = new System.Drawing.Point(264, 71);
+			this.nudMaxSearchResults.Location = new System.Drawing.Point(131, 19);
 			this.nudMaxSearchResults.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -385,7 +408,7 @@
             0});
 			this.nudMaxSearchResults.Name = "nudMaxSearchResults";
 			this.nudMaxSearchResults.Size = new System.Drawing.Size(79, 20);
-			this.nudMaxSearchResults.TabIndex = 2;
+			this.nudMaxSearchResults.TabIndex = 1;
 			this.nudMaxSearchResults.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.nudMaxSearchResults.ThousandsSeparator = true;
 			this.nudMaxSearchResults.Value = new decimal(new int[] {
@@ -394,19 +417,44 @@
             0,
             0});
 			// 
-			// label6
+			// gbxCompilation
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(139, 73);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(119, 13);
-			this.label6.TabIndex = 1;
-			this.label6.Text = "Maximum search results";
+			this.gbxCompilation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+							| System.Windows.Forms.AnchorStyles.Right)));
+			this.gbxCompilation.Controls.Add(this.chkCompileCheckHeader);
+			this.gbxCompilation.Controls.Add(this.chkCompileCheckFormat);
+			this.gbxCompilation.Controls.Add(this.chkCompileOnSave);
+			this.gbxCompilation.Location = new System.Drawing.Point(6, 6);
+			this.gbxCompilation.Name = "gbxCompilation";
+			this.gbxCompilation.Size = new System.Drawing.Size(471, 99);
+			this.gbxCompilation.TabIndex = 0;
+			this.gbxCompilation.TabStop = false;
+			this.gbxCompilation.Text = "Compilation";
+			// 
+			// chkCompileCheckHeader
+			// 
+			this.chkCompileCheckHeader.AutoSize = true;
+			this.chkCompileCheckHeader.Location = new System.Drawing.Point(7, 67);
+			this.chkCompileCheckHeader.Name = "chkCompileCheckHeader";
+			this.chkCompileCheckHeader.Size = new System.Drawing.Size(255, 17);
+			this.chkCompileCheckHeader.TabIndex = 2;
+			this.chkCompileCheckHeader.Text = "verify presence and contents of the header entry";
+			this.chkCompileCheckHeader.UseVisualStyleBackColor = true;
+			// 
+			// chkCompileCheckFormat
+			// 
+			this.chkCompileCheckFormat.AutoSize = true;
+			this.chkCompileCheckFormat.Location = new System.Drawing.Point(7, 43);
+			this.chkCompileCheckFormat.Name = "chkCompileCheckFormat";
+			this.chkCompileCheckFormat.Size = new System.Drawing.Size(222, 17);
+			this.chkCompileCheckFormat.TabIndex = 1;
+			this.chkCompileCheckFormat.Text = "check language dependent format strings";
+			this.chkCompileCheckFormat.UseVisualStyleBackColor = true;
 			// 
 			// chkCompileOnSave
 			// 
 			this.chkCompileOnSave.AutoSize = true;
-			this.chkCompileOnSave.Location = new System.Drawing.Point(190, 29);
+			this.chkCompileOnSave.Location = new System.Drawing.Point(6, 19);
 			this.chkCompileOnSave.Name = "chkCompileOnSave";
 			this.chkCompileOnSave.Size = new System.Drawing.Size(103, 17);
 			this.chkCompileOnSave.TabIndex = 0;
@@ -483,10 +531,6 @@
 			// 
 			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
 							| System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox1.Controls.Add(this.label19);
-			this.groupBox1.Controls.Add(this.tbxMOCompilerParams);
-			this.groupBox1.Controls.Add(this.label18);
-			this.groupBox1.Controls.Add(this.label17);
 			this.groupBox1.Controls.Add(this.btnMOCompilerPath);
 			this.groupBox1.Controls.Add(this.tbxMOCompilerPath);
 			this.groupBox1.Controls.Add(this.label20);
@@ -495,47 +539,7 @@
 			this.groupBox1.Size = new System.Drawing.Size(468, 158);
 			this.groupBox1.TabIndex = 1;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "PO -> PO compiler";
-			// 
-			// label19
-			// 
-			this.label19.AutoSize = true;
-			this.label19.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label19.Location = new System.Drawing.Point(6, 136);
-			this.label19.Name = "label19";
-			this.label19.Size = new System.Drawing.Size(290, 13);
-			this.label19.TabIndex = 6;
-			this.label19.Text = "Example for msgfmt: %source% --output-file=\"%destination%\"";
-			this.label19.UseMnemonic = false;
-			// 
-			// tbxMOCompilerParams
-			// 
-			this.tbxMOCompilerParams.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-							| System.Windows.Forms.AnchorStyles.Right)));
-			this.tbxMOCompilerParams.Location = new System.Drawing.Point(6, 81);
-			this.tbxMOCompilerParams.Name = "tbxMOCompilerParams";
-			this.tbxMOCompilerParams.Size = new System.Drawing.Size(453, 20);
-			this.tbxMOCompilerParams.TabIndex = 4;
-			// 
-			// label18
-			// 
-			this.label18.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label18.Location = new System.Drawing.Point(6, 104);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(453, 32);
-			this.label18.TabIndex = 5;
-			this.label18.Text = "%source% will be replaced with the source .po file, %destination% will be replace" +
-				 "d with the .mo file to generate";
-			this.label18.UseMnemonic = false;
-			// 
-			// label17
-			// 
-			this.label17.AutoSize = true;
-			this.label17.Location = new System.Drawing.Point(6, 64);
-			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(102, 13);
-			this.label17.TabIndex = 3;
-			this.label17.Text = "Compiler parameters";
+			this.groupBox1.Text = "PO -> MO compiler";
 			// 
 			// btnMOCompilerPath
 			// 
@@ -1171,8 +1175,11 @@
 			this.tlpColors.PerformLayout();
 			this.tcTabs.ResumeLayout(false);
 			this.tpGeneral.ResumeLayout(false);
-			this.tpGeneral.PerformLayout();
+			this.gbxVarious.ResumeLayout(false);
+			this.gbxVarious.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudMaxSearchResults)).EndInit();
+			this.gbxCompilation.ResumeLayout(false);
+			this.gbxCompilation.PerformLayout();
 			this.tpAppearance.ResumeLayout(false);
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
@@ -1185,14 +1192,14 @@
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
-			this.tpSpecialChars.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dgvSpecialChars)).EndInit();
 			this.tpBingTranslator.ResumeLayout(false);
 			this.tpBingTranslator.PerformLayout();
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			this.flpBing.ResumeLayout(false);
 			this.flpBing.PerformLayout();
+			this.tpSpecialChars.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvSpecialChars)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1230,10 +1237,6 @@
 		private System.Windows.Forms.OpenFileDialog ofdViewer;
 		private System.Windows.Forms.TableLayoutPanel tlpFonts;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Label label17;
-		private System.Windows.Forms.Label label18;
-		private System.Windows.Forms.TextBox tbxMOCompilerParams;
-		private System.Windows.Forms.Label label19;
 		private System.Windows.Forms.Button btnMOCompilerPath;
 		private System.Windows.Forms.TextBox tbxMOCompilerPath;
 		private System.Windows.Forms.Label label20;
@@ -1285,5 +1288,9 @@
 		private System.Windows.Forms.TextBox tbxBingTranslatorClientID;
 		private System.Windows.Forms.TabPage tpSpecialChars;
 		private System.Windows.Forms.DataGridView dgvSpecialChars;
+		private System.Windows.Forms.GroupBox gbxCompilation;
+		private System.Windows.Forms.CheckBox chkCompileCheckFormat;
+		private System.Windows.Forms.GroupBox gbxVarious;
+		private System.Windows.Forms.CheckBox chkCompileCheckHeader;
 	}
 }

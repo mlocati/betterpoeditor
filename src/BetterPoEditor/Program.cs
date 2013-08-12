@@ -33,9 +33,8 @@ namespace BePoE
 				Directory.CreateDirectory(dictionariesFolder);
 			Program.SpellChecker = new Utils.SpellChecker(dictionariesFolder);
 			Program.Vars = new Vars();
-			if ((Program.Vars.MOCompilerPath.Length == 0) && (Program.Vars.MOCompilerParameters.Length == 0))
+			if(string.IsNullOrEmpty(Program.Vars.MOCompilerPath))
 			{
-				Program.Vars.MOCompilerParameters = "\"%source%\" --output-file=\"%destination%\"";
 				if (Vars.IsPosix)
 					Program.Vars.MOCompilerPath = "/usr/bin/msgfmt";
 				else

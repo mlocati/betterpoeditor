@@ -62,12 +62,13 @@ namespace BePoE.UI
 			Utils.Gfx.SetFormIcon(this);
 			this._newOptionsApplier = newOptionsApplier;
 			this.chkCompileOnSave.Checked = Program.Vars.CompileOnSave;
+			this.chkCompileCheckFormat.Checked = Program.Vars.MOCompiler_CheckFormat;
+			this.chkCompileCheckHeader.Checked = Program.Vars.MOCompiler_CheckHeader;
 			this.nudMaxSearchResults.Value = Convert.ToDecimal(Program.Vars.MaxSearchResults);
 			this.btnApply.Enabled = (this._newOptionsApplier != null);
 			this.tbxViewerPath.Text = Program.Vars.ViewerPath;
 			this.tbxViewerParams.Text = Program.Vars.ViewerParameters;
 			this.tbxMOCompilerPath.Text = Program.Vars.MOCompilerPath;
-			this.tbxMOCompilerParams.Text = Program.Vars.MOCompilerParameters;
 			this._colorsLabels = new Dictionary<ColorEnviroPlace, Label>();
 			List<SpecialCharManager> specialCharsData =  new List<SpecialCharManager>(Program.Vars.SpecialChars.Count);
 			foreach (KeyValuePair<string, string> kv in Program.Vars.SpecialChars)
@@ -185,21 +186,6 @@ namespace BePoE.UI
 					return false;
 				}
 			}
-			string moCompilerParams = this.tbxMOCompilerParams.Text.Trim();
-			if (moCompilerParams.Length == 0)
-				moCompilerParams = "\"%source%\" --output-file=\"%destination%\"";
-			if (!moCompilerParams.Contains("%source%"))
-			{
-				MessageBox.Show("The mo compiler parameters don't contain the %source% placeholder.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-				FocalizeControl(this.tbxMOCompilerParams);
-				return false;
-			}
-			if (!moCompilerParams.Contains("%destination%"))
-			{
-				MessageBox.Show("The mo compiler parameters don't contain the %destination% placeholder.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-				FocalizeControl(this.tbxMOCompilerParams);
-				return false;
-			}
 			string btClientID = this.tbxBingTranslatorClientID.Text.Trim();
 			string btClientSecret = this.tbxBingTranslatorClientSecret.Text.Trim();
 			if ((btClientID.Length > 0) || (btClientSecret.Length > 0))
@@ -239,11 +225,12 @@ namespace BePoE.UI
 			}
 
 			Program.Vars.CompileOnSave = this.chkCompileOnSave.Checked;
+			Program.Vars.MOCompiler_CheckFormat = this.chkCompileCheckFormat.Checked;
+			Program.Vars.MOCompiler_CheckHeader = this.chkCompileCheckHeader.Checked;
 			Program.Vars.MaxSearchResults = Convert.ToInt32(Math.Round(this.nudMaxSearchResults.Value));
 			Program.Vars.ViewerPath = viewerName;
 			Program.Vars.ViewerParameters = viewerParams;
 			Program.Vars.MOCompilerPath = moCompilerName;
-			Program.Vars.MOCompilerParameters = moCompilerParams;
 			foreach (KeyValuePair<ColorEnviroPlace, Label> k in this._colorsLabels)
 			{
 				Program.Vars.Colors[k.Key] = k.Value.BackColor;
