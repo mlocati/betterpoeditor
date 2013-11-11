@@ -347,7 +347,7 @@ namespace BePoE.PO
 				{
 					Dictionary<DataLine.Kinds, Regex> rx = new Dictionary<DataLine.Kinds, Regex>();
 					RegexOptions options = RegexOptions.Compiled | RegexOptions.CultureInvariant | RegexOptions.ExplicitCapture | RegexOptions.Singleline;
-					rx.Add(DataLine.Kinds.Context, new Regex(@"^msgctxt\s+""(?<text>.*)""\s*$", options));
+					rx.Add(DataLine.Kinds.Context, new Regex(@"^msgctxt\s+""?(?<text>.*)""?\s*$", options));
 					rx.Add(DataLine.Kinds.ID, new Regex(@"^msgid\s+""(?<text>.*)""\s*$", options));
 					rx.Add(DataLine.Kinds.IDPlural, new Regex(@"^msgid_plural\s+""(?<text>.*)""\s*$", options));
 					rx.Add(DataLine.Kinds.Translated, new Regex(@"^msgstr\s+""(?<text>.*)""\s*$", options));
