@@ -23,7 +23,6 @@ monobins:../src/BetterPoEditor/bin/Release/BetterPoEditor.exe ../src/NetSpell.Di
 	@./build-project BetterPoEditor
 
 install:monobins
-	@chmod a+x ./run-mono-exe
 	@echo -n "Installing library files in ${INSTALL_PATH}/lib/betterpoeditor... "
 	@if [ ! -d ${INSTALL_PATH}/lib/betterpoeditor ]; then mkdir ${INSTALL_PATH}/lib/betterpoeditor; fi
 	@cp ./run-mono-exe ${INSTALL_PATH}/lib/betterpoeditor
