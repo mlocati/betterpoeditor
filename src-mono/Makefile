@@ -8,23 +8,18 @@ all:monobins
 monobins:../src/BetterPoEditor/bin/Release/BetterPoEditor.exe ../src/NetSpell.DictionaryBuild/bin/Release/NetSpell.DictionaryBuild.exe
 
 ../src/Jayrock.Json/bin/Release/Jayrock.Json.dll:
-	@chmod u+x ./build-project
 	@./build-project Jayrock.Json
 
 ../src/NetSpell.SpellChecker/bin/Release/NetSpell.SpellChecker.dll:
-	@chmod u+x ./build-project
 	@./build-project NetSpell.SpellChecker
 
 ../src/NetSpell.DictionaryBuild/bin/Release/NetSpell.DictionaryBuild.exe:../src/NetSpell.SpellChecker/bin/Release/NetSpell.SpellChecker.dll
-	@chmod u+x ./build-project
 	@./build-project NetSpell.DictionaryBuild
 
 ../src/TidyNet/bin/Release/TidyNet.dll:
-	@chmod u+x ./build-project
 	@./build-project TidyNet
 
 ../src/BetterPoEditor/bin/Release/BetterPoEditor.exe:../src/Jayrock.Json/bin/Release/Jayrock.Json.dll ../src/NetSpell.SpellChecker/bin/Release/NetSpell.SpellChecker.dll ../src/TidyNet/bin/Release/TidyNet.dll
-	@chmod u+x ./build-project
 	@./build-project BetterPoEditor
 
 install:monobins

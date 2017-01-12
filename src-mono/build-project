@@ -36,6 +36,3 @@ else
 	RC=1
 fi
 exit ${RC}
-xbuild /nologo /property:Configuration=Release *.csproj
-
-echo ${AA}
